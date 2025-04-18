@@ -56,6 +56,11 @@ body::before {
   justify-content: flex-start;
   align-items: center;
   position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.05);
 }
 
 h1 {
