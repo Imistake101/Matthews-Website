@@ -173,7 +173,7 @@ a:hover {
   bottom: 0;
   left: 0;
   padding: 10px 0;
-  background-color: var(--container-bg);
+  background-color: rgba(53, 51, 72, 0.4);
   margin-top: auto;
   display: flex;
   justify-content: center;
@@ -188,18 +188,22 @@ a:hover {
     max-width: 95%;
     padding: 15px;
   }
+
   h1 {
     font-size: 1.5rem;
     text-align: center;
     margin-top: 10px;
   }
+
   h2 {
     font-size: 1.2rem;
   }
+
   .about-me p, .socials ul, .links ul {
     font-size: 0.9rem;
     word-wrap: break-word;
   }
+
   .profile-pic-container {
     width: 100px;
     height: 100px;
@@ -208,6 +212,7 @@ a:hover {
     top: auto;
     margin: 0 auto 10px;
   }
+
   .footer {
     font-size: 0.8rem;
     text-align: center;
@@ -216,6 +221,7 @@ a:hover {
     bottom: 0;
     left: 0;
     padding-top: 10px;
+    background-color: rgba(53, 51, 72, 0.4);
   }
 
   ul li {
