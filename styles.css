@@ -159,7 +159,7 @@ a:hover {
 
 .wave-emoji {
   display: inline-block;
-  animation: wave 1.8s ease-in-out infinite;
+  animation: wave 1.8s ease-in-out forwards;
   transform-origin: 70% 70%;
 }
 
