@@ -9,7 +9,7 @@
   --highlight-color: #87b0f9;
   --background-start: #353348;
   --background-end: #171822;
-  --container-bg: rgba(53, 51, 72, 0.9);
+  --container-bg: rgba(34, 34, 51, 0.9);
   --border-color: #696d86;
   --shadow-color: rgba(0, 0, 0, 0.3);
 }
@@ -159,14 +159,15 @@ a:hover {
 
 .wave-emoji {
   display: inline-block;
-  animation: wave 0.5s ease-in-out 1;
+  animation: wave 0.8s ease-in-out 3;
 }
 
 @keyframes wave {
   0% { transform: rotate(0deg); }
-  25% { transform: rotate(15deg); }
-  50% { transform: rotate(0deg); }
-  75% { transform: rotate(-15deg); }
+  20% { transform: rotate(15deg); }
+  40% { transform: rotate(0deg); }
+  60% { transform: rotate(-15deg); }
+  80% { transform: rotate(0deg); }
   100% { transform: rotate(0deg); }
 }
 
@@ -192,7 +193,7 @@ a:hover {
 @media (max-width: 768px) {
   .container {
     max-width: 95%;
-    padding: 20px;
+    padding: 25px 15px;
   }
 
   h1 {
