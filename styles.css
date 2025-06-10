@@ -295,3 +295,31 @@ body.theme-red-black .discord-desc,
 body.theme-red-black .github-desc {
   color: #ff1100;
 }
+
+/* Mobile View Fix */
+@media (max-width: 768px) {
+  .profile-pic-container {
+    position: static;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .container {
+    padding: 20px 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-me p,
+  ul li {
+    font-size: 0.95rem;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+    padding: 15px 10px;
+    position: static;
+  }
+}
