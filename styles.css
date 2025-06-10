@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #dce3ff;
+  --highlight-color: #87b0f9;
+  --background-start: #353348;
+  --background-end: #171822;
+  --container-bg: rgba(34, 34, 51, 0.9);
+  --border-color: #696d86;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--main-color);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  position: relative;
+  overflow-y: auto;
+  background: linear-gradient(135deg, var(--background-start), var(--background-end));
+  user-select: none;
+  flex-direction: column;
+  transition: background 0.5s ease-in-out;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://imistake101.github.io/Matthews-Website/background.webp');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.container {
+  background-color: var(--container-bg);
+  padding: 25px 20px;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  transition: box-shadow 0.3s ease-in-out, background-color 0.5s ease, color 0.5s ease;
+}
+
+.container:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: -15px;
+}
+
+h1 .highlighted {
+  color: var(--highlight-color);
+}
+
+hr {
+  border: 0;
+  border-top: 3px solid var(--border-color);
+  margin: 10px auto;
+  width: 100%;
+  max-width: 880px;
+  border-radius: 50px;
+  height: 3px;
+}
+
+h2 {
+  color: var(--main-color);
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.about-me,
+.socials,
+.links {
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.about-me p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 12px;
+  line-height: 1.5;
+  max-width: 650px;
+  word-wrap: break-word;
+  color: var(--main-color);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+ul li {
+  margin: 8px 0;
+  text-indent: -10px;
+  padding-left: 20px;
+  color: var(--main-color);
+}
+
+ul li::marker {
+  content: "•";
+  color: var(--main-color);
+  font-size: 1.25rem;
+}
+
+a {
+  color: var(--highlight-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.highlight-link {
+  color: var(--main-color);
+  font-weight: 500;
+  margin-right: 5px;
+}
+
+.profile-pic-container {
+  width: 220px;
+  height: 220px;
+  border-radius: 8px;
+  border: 3px solid var(--border-color);
+  background-image: url('https://imistake101.github.io/Matthews-Website/cat.webp');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  right: 40px;
+  top: 200px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background-image 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+
+.profile-pic-container:hover {
+  transform: scale(1.05);
+}
+
+.wave-emoji {
+  display: inline-block;
+  animation: wave 1.8s ease-in-out forwards;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.footer {
+  font-size: 0.9rem;
+  color: var(--main-color);
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 10px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#enter-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--background-end);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#enter-button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--main-color);
+  background-color: var(--highlight-color);
+  border: none;
+  padding: 14px 35px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+#enter-button:hover,
+#enter-button:focus {
+  background-color: #a1b3f5;
+  outline: none;
+}
+
+body.theme-red-black {
+  background: linear-gradient(135deg, #000000, #330000);
+}
+
+body.theme-red-black::before {
+  background-image: url('https://imistake101.github.io/Matthews-Website/backgroundtwo.webp');
+}
+
+body.theme-red-black .container {
+  background-color: #000000;
+  color: #ffffff;
+  box-shadow: 0 6px 20px #ff1100cc;
+  border: 2px solid #ff1100;
+}
+
+body.theme-red-black .container:hover {
+  box-shadow: 0 8px 30px #ff1100ee;
+}
+
+body.theme-red-black h1 .highlighted,
+body.theme-red-black a,
+body.theme-red-black .highlight-link {
+  color: #ff1100;
+}
+
+body.theme-red-black ul li,
+body.theme-red-black ul li::marker,
+body.theme-red-black .about-me p {
+  color: #ffffff;
+}
+
+body.theme-red-black .profile-pic-container {
+  border-color: #ff1100;
+  background-image: url('https://imistake101.github.io/Matthews-Website/german.webp');
+}
+
+body.theme-red-black .massgrave,
+body.theme-red-black .cherax {
+  color: #dce3ff;
+}
+
+body.theme-red-black .discord,
+body.theme-red-black .github {
+  color: #dce3ff;
+}
+
+body.theme-red-black .massgrave-desc,
+body.theme-red-black .cherax-desc,
+body.theme-red-black .discord-desc,
+body.theme-red-black .github-desc {
+  color: #ff1100;
+}
