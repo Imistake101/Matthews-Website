@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const container = document.querySelector('.container');
   const profilePic = document.querySelector('.profile-pic-container');
   const meowSound = document.getElementById('meow-sound');
+  const mainDivider = document.getElementById('main-divider');
 
   let clickCount = 0;
   let themeActivated = false;
@@ -44,6 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
           themeActivated = true;
           document.body.classList.add('theme-red-black');
           profilePic.style.backgroundImage = "url('https://imistake101.github.io/Matthews-Website/german.webp')";
+          if(mainDivider) {
+            mainDivider.style.borderColor = '#ff0000';
+          }
           playSound(wiseSound);
           erikaMusic.volume = 0.3;
           erikaMusic.play().catch(() => {});
