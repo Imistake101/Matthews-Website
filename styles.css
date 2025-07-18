@@ -214,6 +214,7 @@ a:hover {
     margin: 0 auto 10px;
     right: auto;
     top: auto;
+    background: url('assets/images/cat-placeholder.webp') center/cover no-repeat;
   }
 
   .footer {
