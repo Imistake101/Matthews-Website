@@ -97,6 +97,15 @@ h2 {
   max-width: 650px;
   color: var(--main-color);
   word-wrap: break-word;
+  line-height: 1.6;
+  font-family: 'Inter', 'Segoe UI Emoji', 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Symbol', sans-serif;
+}
+
+.about-me p .emoji {
+  font-family: 'Segoe UI Emoji', 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Symbol', sans-serif;
+  vertical-align: middle;
+  line-height: 1;
+  display: inline-block;
 }
 
 ul {
