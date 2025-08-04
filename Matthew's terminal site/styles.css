@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+:root {
+  --background: #1e1e1e;
+  --grid-color: rgba(100, 100, 100, 0.1);
+  --foreground: #d4d4d4;
+  --cursor: #aeafad;
+  --prompt-color: #569cd6;
+  --green: #6a9955;
+  --red: #f44747;
+  --yellow: #d7ba7d;
+  --link-color: #3794ff;
+  --selection-bg: #264f78;
+  --shadow: rgba(0, 0, 0, 0.7);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0; padding: 0; height: 100%;
+  background-color: var(--background);
+  background-image:
+    url("assets/images/wallpaper.png"),
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+  background-repeat: no-repeat, repeat, repeat;
+  background-size: cover, 20px 20px, 20px 20px;
+  background-position: center center, 0 0, 0 0;
+  font-family: 'Fira Code', monospace;
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: text;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+#terminal {
+  width: 100%;
+  max-width: 720px;
+  height: 520px;
+  background-color: var(--background);
+  box-shadow: 0 0 20px var(--shadow);
+  border: 1px solid #333;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.8rem;
+  overflow: hidden;
+}
+
+#output {
+  flex-grow: 1;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  line-height: 1.4;
+  font-size: 16px;
+  padding-right: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--link-color) transparent;
+  color: var(--foreground);
+}
+
+#output::-webkit-scrollbar {
+  width: 8px;
+}
+#output::-webkit-scrollbar-thumb {
+  background-color: var(--link-color);
+  border-radius: 4px;
+}
+#output::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#input-line {
+  display: flex;
+  align-items: center;
+  margin-top: 0.4rem;
+  color: var(--foreground);
+}
+
+.prompt {
+  color: var(--prompt-color);
+  margin-right: 0.6rem;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+#cmdline {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  color: var(--foreground);
+  font-family: inherit;
+  font-size: 16px;
+  outline: none;
+  caret-color: var(--cursor);
+  padding: 0;
+  line-height: 1.4;
+  user-select: text;
+
+  /* Blinking caret animation */
+  animation: blinkCaret 1s step-end infinite;
+}
+
+#cmdline::selection {
+  background-color: var(--selection-bg);
+}
+
+@keyframes blinkCaret {
+  50% { caret-color: transparent; }
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.green {
+  color: var(--green);
+}
+
+.error {
+  color: var(--red);
+}
+
+.ascii {
+  color: var(--green);
+  white-space: pre;
+  font-size: 14px;
+  margin-bottom: 1rem;
+  user-select: text;
+}
+
+.line {
+  margin-bottom: 0.25rem;
+}
