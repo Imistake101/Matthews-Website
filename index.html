@@ -20,27 +20,19 @@
   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+  <link rel="preload" as="font" href="assets/fonts/OpenSans-Bold.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="assets/images/background.webp">
   <link rel="preload" as="image" href="assets/images/cat.webp">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body style="background:#171822;">
   <div class="container">
-    <h1>
-      Welcome to my <span class="highlighted">website!</span>
-      <span class="wave-emoji">👋</span>
-    </h1>
+    <h1>Welcome to my <span class="highlighted">website!</span></h1>
     <hr>
-
     <section class="about-me">
       <h2>About Me</h2>
-      <p>
-        I'm Matthew, a 17-year-old from Canada with a strong interest in operating systems and gaming.
-        I mostly play Rainbow Six Siege, GTA, and CS2. <span class="emoji">🦆</span>
-      </p>
+      <p>I'm Matthew, a 17-year-old from Canada with a strong interest in operating systems and gaming. I mostly play Rainbow Six Siege, GTA, and CS2. <span class="emoji">🦆</span></p>
     </section>
-
     <section class="socials">
       <h2>Socials</h2>
       <ul>
@@ -48,7 +40,6 @@
         <li><span class="highlight-link">GitHub:</span> <a href="https://github.com/Imistake101" target="_blank" rel="noopener noreferrer">Imistake101</a></li>
       </ul>
     </section>
-
     <section class="links">
       <h2>Cool things</h2>
       <ul>
@@ -56,10 +47,8 @@
         <li><span class="highlight-link">Revision:</span> <a href="https://revi.cc/" target="_blank" rel="noopener noreferrer">A customized version of Windows.</a></li>
       </ul>
     </section>
-
     <figure class="profile-pic-container"></figure>
   </div>
-
   <footer class="footer"></footer>
   <audio id="meow-sound" src="assets/audio/quack.mp3" preload="auto"></audio>
   <script src="script.js"></script>

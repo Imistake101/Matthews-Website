@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url('assets/fonts/OpenSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,9 +17,9 @@
   --highlight-color: #87b0f9;
   --background-start: #353348;
   --background-end: #171822;
-  --container-bg: rgba(34, 34, 51, 0.9);
+  --container-bg: rgba(34, 34, 51, .9);
   --border-color: #696d86;
-  --shadow-color: rgba(0, 0, 0, 0.3);
+  --shadow-color: rgba(0, 0, 0, .3);
 }
 
 body {
@@ -29,7 +37,7 @@ body {
   position: relative;
   overflow-y: auto;
   user-select: none;
-  animation: fadeIn 1s ease-out;
+  animation: fadeIn 0.6s ease-out;
 }
 
 body::before {
@@ -47,16 +55,16 @@ body::before {
   max-width: 820px;
   width: 100%;
   text-align: center;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 6px 20px rgb(0 0 0 / .5);
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow .3s ease-in-out;
   position: relative;
 }
 
 .container:hover {
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 8px 30px rgb(0 0 0 / .6);
 }
 
 h1 {
@@ -96,6 +104,7 @@ h2 {
 
 .about-me p {
   font-size: 1rem;
+  font-weight: 300;
   margin-bottom: 12px;
   max-width: 650px;
   line-height: 1.6;
@@ -106,6 +115,7 @@ ul {
   padding-left: 1.25em;
   margin-bottom: 10px;
   font-size: 1rem;
+  font-weight: 300;
 }
 
 ul li {
@@ -121,7 +131,7 @@ a {
   color: var(--highlight-color);
   text-decoration: none;
   position: relative;
-  transition: 0.3s;
+  transition: .3s;
 }
 
 a::after {
@@ -132,7 +142,7 @@ a::after {
   width: 0;
   height: 2px;
   background: var(--highlight-color);
-  transition: 0.3s;
+  transition: .3s;
 }
 
 a:hover {
@@ -156,28 +166,13 @@ a:hover::after {
   overflow: hidden;
 }
 
-.wave-emoji {
-  display: inline-block;
-  animation: wave 1.8s ease-in-out forwards;
-  transform-origin: 70% 70%;
-}
-
-@keyframes wave {
-  0%, 60%, 100% { transform: rotate(0deg); }
-  10% { transform: rotate(14deg); }
-  20% { transform: rotate(-8deg); }
-  30% { transform: rotate(14deg); }
-  40% { transform: rotate(-4deg); }
-  50% { transform: rotate(10deg); }
-}
-
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  from { opacity: 0 }
+  to { opacity: 1 }
 }
 
 .footer {
-  font-size: 0.9rem;
+  font-size: .9rem;
   text-align: center;
   width: 100%;
   position: absolute;
@@ -195,22 +190,18 @@ a:hover::after {
     max-width: 95%;
     padding: 15px 20px;
   }
-
   h1 {
     font-size: 1.5rem;
     margin-top: 10px;
   }
-
   h2 {
     font-size: 1.2rem;
   }
-
   .about-me p,
   .socials ul,
   .links ul {
-    font-size: 0.9rem;
+    font-size: .9rem;
   }
-
   .profile-pic-container {
     width: 100px;
     height: 100px;
@@ -219,9 +210,8 @@ a:hover::after {
     right: auto;
     top: auto;
   }
-
   .footer {
-    font-size: 0.8rem;
+    font-size: .8rem;
     position: relative;
     padding-top: 10px;
     display: none;
